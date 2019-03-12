@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.alexandrebarboza.vacinas"
+    android:versionCode="21"
+    android:versionName="Version 1.2.1 BETA BR FREE"
+    android:installLocation="internalOnly">
+
+    <!-- <uses-sdk android:targetSdkVersion="26" /> -->
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/dog192"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/dog144"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".AnimalEditActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".AnimalAddVacinaActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".VacinaEditActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".VacinaHistoryActivity" />
+        <activity android:name=".VacinaHIstoryOrdemActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".VacinaHistoryFiltroActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".AnimalAddRemedioActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".RemedioEditActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".RemedioHistoryActivity" />
+        <activity android:name=".RemedioHIstoryOrdemActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".RemedioHistoryFiltroActivity" android:screenOrientation="portrait"/>
+
+        <receiver android:name=".Utility.Notifications.Receiver" />
+
+        <receiver
+            android:name=".Utility.Notifications.BootReceiver"
+            android:enabled="true"
+            android:directBootAware="true"
+            android:exported="false">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".Utility.Notifications.ServiceVacinas" />
+        <service android:name=".Utility.Notifications.ServiceRemedios" />
+
+    </application>
+</manifest>

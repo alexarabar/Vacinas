@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/layout_history_remedios_filtro"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+android:orientation="vertical"
+tools:context="br.com.alexandrebarboza.vacinas.RemedioHistoryFiltroActivity"
+android:weightSum="8"
+android:background="@color/light_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:text="Remédios - Filtragem:"
+            android:textColor="@color/dark_blue"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_tipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:text="@string/str_tipo"
+            android:textColor="@color/black"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center" />
+
+        <Spinner
+            android:id="@+id/spinner_tipo_remedio"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginBottom="2.5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/edit_default_white"
+            android:elevation="6dp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_descricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:text="@string/str_descricao"
+            android:textColor="@color/black"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center" />
+
+        <Spinner
+            android:id="@+id/spinner_descricao_remedio"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginBottom="2.5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/edit_default_white"
+            android:elevation="6dp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_inicio_em"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:text="@string/str_lab_ini"
+                android:textColor="@color/black"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center" />
+
+            <CheckBox
+                android:id="@+id/check_inicio_em"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:text="De: "
+                android:textColor="@color/black"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/text_remedio_data_inicio"
+                android:layout_width="65dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/edit_default_white"
+                android:textColor="@color/black"
+                android:elevation="6dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:text="Até: "
+                android:textColor="@color/black"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/text_remedio_data_fim"
+                android:layout_width="65dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/edit_default_white"
+                android:textColor="@color/black"
+                android:elevation="6dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_repetir_de"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:text="A cada: "
+                android:layout_marginTop="2.5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="2.5dp"
+                android:textColor="@color/dark_gray"
+                android:id="@+id/text_repetir"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:textAlignment="gravity"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:ems="2"
+                android:inputType="number"
+                android:maxLength="2"
+                android:enabled="false"
+                android:id="@+id/edit_repetir_de"
+                android:background="@drawable/edit_default_white"
+                android:elevation="6dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:layout_gravity="center_vertical"
+                android:gravity="left"/>
+
+            <Spinner
+                android:id="@+id/spinner_unidade_repetir_de"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="0dp"
+                android:enabled="false"
+                android:background="@drawable/edit_default_white"
+                android:elevation="6dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="left"/>
+
+            <CheckBox
+                android:id="@+id/check_repetir_de"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_durante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:text="durante: "
+                android:layout_marginTop="2.5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="2.5dp"
+                android:textColor="@color/dark_gray"
+                android:id="@+id/text_durante"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:textAlignment="gravity"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:ems="2"
+                android:inputType="number"
+                android:maxLength="2"
+                android:enabled="false"
+                android:id="@+id/edit_durante"
+                android:background="@drawable/edit_default_white"
+                android:elevation="6dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:layout_gravity="center_vertical"
+                android:gravity="left"/>
+
+            <Spinner
+                android:id="@+id/spinner_unidade_durante"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="0dp"
+                android:enabled="false"
+                android:background="@drawable/edit_default_white"
+                android:elevation="6dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="left"/>
+
+            <CheckBox
+                android:id="@+id/check_durante"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_dosagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:text="Dosagem: "
+                android:layout_marginTop="2.5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="2.5dp"
+                android:textColor="@color/dark_gray"
+                android:id="@+id/text_dosagem"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:textAlignment="gravity"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:ems="2"
+                android:inputType="number"
+                android:maxLength="2"
+                android:enabled="false"
+                android:id="@+id/edit_dosagem"
+                android:background="@drawable/edit_default_white"
+                android:elevation="6dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:layout_gravity="center_vertical"
+                android:gravity="left"/>
+
+            <Spinner
+                android:id="@+id/spinner_unidade_dosagem"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="0dp"
+                android:enabled="false"
+                android:background="@drawable/edit_default_white"
+                android:elevation="6dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="left"/>
+
+            <CheckBox
+                android:id="@+id/check_dosagem"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_dose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:text="Dose: "
+                android:layout_marginTop="2.5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="2.5dp"
+                android:textColor="@color/dark_gray"
+                android:id="@+id/text_dose"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:textAlignment="gravity"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:ems="2"
+                android:inputType="number"
+                android:maxLength="2"
+                android:enabled="false"
+                android:id="@+id/edit_dose"
+                android:background="@drawable/edit_default_white"
+                android:elevation="6dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:layout_gravity="center_vertical"
+                android:gravity="left"/>
+
+            <Space
+                android:layout_width="80dp"
+                android:layout_height="25dp" />
+
+            <CheckBox
+                android:id="@+id/check_dose"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>

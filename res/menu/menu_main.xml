@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/m_voltar"
+        android:title="Voltar"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/m_salvar"
+        android:title="Gravar"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/m_excluir"
+        android:title="Excluir"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/m_history_vacina"
+        android:title="Histórico"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/m_history_remedio"
+        android:title="Histórico"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/m_history"
+        android:title="Histórico"
+        android:visible="false"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group
+                android:checkableBehavior="none" >
+                <item
+                    android:id="@+id/m_vacina"
+                    android:title="Vacina" />
+                <item
+                    android:id="@+id/m_remedio"
+                    android:title="Remédio" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/m_ordem"
+        android:title="Ordem"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/m_filtro"
+        android:title="Filtro"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+</menu>

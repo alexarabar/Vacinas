@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.alexandrebarboza.vacinas.VacinaHIstoryOrdemActivity"
+    android:id="@+id/layout_history_vacinas_ordem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/light_gray"
+    android:weightSum="6"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:text="Vacinas - Ordenação:"
+        android:textColor="@color/dark_blue"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/layout_primeiro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 = " />
+
+        <TextView
+            android:id="@+id/text_tipo"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:background="@drawable/bt_operation"
+            android:text="@string/str_tipo"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@color/black"
+            android:elevation="3dp"/>
+
+        <CheckBox
+            android:id="@+id/check_primeiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_segundo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 = "/>
+
+        <TextView
+            android:id="@+id/text_descricao"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:background="@drawable/bt_operation"
+            android:text="@string/str_descricao"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@color/black"
+            android:elevation="3dp"/>
+
+        <CheckBox
+            android:id="@+id/check_segundo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_terceiro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 = "/>
+
+        <TextView
+            android:id="@+id/text_aplicada"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:background="@drawable/bt_operation"
+            android:text="@string/str_aplicada"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@color/black"
+            android:elevation="3dp"/>
+
+        <CheckBox
+            android:id="@+id/check_terceiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_quarto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4 = " />
+
+        <TextView
+            android:id="@+id/text_revacinar"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:background="@drawable/bt_operation"
+            android:text="@string/str_revacinar"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@color/black"
+            android:elevation="3dp"/>
+
+        <CheckBox
+            android:id="@+id/check_quarto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:text="Arraste e solte!"
+        android:textColor="@color/dark_gray"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:layout_weight="1"/>
+
+</LinearLayout>
